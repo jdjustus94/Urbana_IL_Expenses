@@ -1,1 +1,2 @@
-# SQL queries exploring the expenditures of the city of Urbana IL. I took an interest in my surrounding area's expenditures when I had the opporuntity to use the city of Urbana's open data. This was quite a challenge as this data was a union between an old dataset and a newer one, which was not updated. What is queried here is my standarization of the data for easier readability and querying.
+# SQL queries exploring the expenditures of the city of Urbana IL. The queries shown here are meant to answer the question; where does the money go? 
+# I set out to analyze the city of Urbana's expenditures in areas that I thought to be common questions among any resident. Such as 
