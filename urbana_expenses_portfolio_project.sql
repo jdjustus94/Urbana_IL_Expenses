@@ -118,7 +118,7 @@ CASE EXTRACT(year FROM fiscal_year) WHEN '2020' THEN
 ROUND((SUM(amount) OVER(PARTITION BY amount ORDER BY fiscal_year ASC)*100.0/(SELECT SUM(amount) FROM urbana_expenses WHERE description LIKE 'COVID%' AND EXTRACT(year from fiscal_year) = '2020')),2)
 WHEN '2021' THEN ROUND((SUM(amount) OVER(PARTITION BY amount ORDER BY fiscal_year ASC)*100.0/(SELECT SUM(amount) FROM urbana_expenses WHERE description LIKE 'COVID%' AND EXTRACT(year from fiscal_year) = '2021')),2)
 WHEN '2022' THEN ROUND((SUM(amount) OVER(PARTITION BY amount ORDER BY fiscal_year ASC)*100.0/(SELECT SUM(amount) FROM urbana_expenses WHERE description LIKE 'COVID%' AND EXTRACT(year from fiscal_year) = '2022')),2)
-WHEN '2023' THEN ROUND((SUM(amount) OVER(PARTITION BY amount ORDER BY fiscal_year ASC)*100.0/(SELECT SUM(amount) FROM urbana_expenses WHERE description LIKE 'COVID%' AND EXTRACT(year from fiscal_year) = '2020')),2) END
+WHEN '2023' THEN ROUND((SUM(amount) OVER(PARTITION BY amount ORDER BY fiscal_year ASC)*100.0/(SELECT SUM(amount) FROM urbana_expenses WHERE description LIKE 'COVID%' AND EXTRACT(year from fiscal_year) = '2023')),2) END
 FROM urbana_expenses
 WHERE description LIKE 'COVID%'
 GROUP BY 1,2,3,4,5
